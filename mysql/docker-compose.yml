@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql:5
+    container_name: mysql5-container
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_USER: commonuser
+      MYSQL_PASSWORD: commonuser
+    volumes:
+      - D:/Workspace/Docker/mysql5/data:/var/lib/mysql
+      - D:/Workspace/Docker/mysql5/config/mysql.cnf:/etc/mysql/mysql.cnf
+    ports:
+      - "3306:3306"

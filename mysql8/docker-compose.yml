@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql8-container
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_USER: commonuser
+      MYSQL_PASSWORD: commonuser
+    volumes:
+          - D:/Workspace/Docker/mysql8/data:/var/lib/mysql
+          - D:/Workspace/Docker/mysql8/config/my.cnf:/etc/my.cnf
+    ports:
+      - "3308:3306"
+#    command: --innodb-use-native-aio=0
