@@ -70,10 +70,10 @@ services:
       - "13301:13301/tcp"
       # Forwarder config
       - "13302:13302/tcp"
-      volumes:
+    volumes:
         - "graylog_data:/usr/share/graylog/data/data"
         - "graylog_journal:/usr/share/graylog/data/journal"
-      restart: "on-failure"
+    restart: "on-failure"
 
 networks:
   graylog:
