@@ -1,1 +1,5 @@
 .idea/
+/Prometheus-Grafana-Docker/grafana_data/
+/rabbitmq/data/
+/Prometheus-Grafana-Docker/prometheus_data/
+/nacos-docker/example/standalone-logs/

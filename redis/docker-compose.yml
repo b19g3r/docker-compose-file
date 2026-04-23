@@ -1,0 +1,13 @@
+services:
+  redis-server:
+    image: redis:latest
+    container_name: redis-server
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --save 60 1 --loglevel warning --requirepass admin
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:

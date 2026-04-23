@@ -1,0 +1,10 @@
+services:
+  apisix-dashboard:
+    image: apache/apisix-dashboard
+    container_name: apisix-dashboard
+    ports:
+      - "9000:9000"
+    extra_hosts:
+      - "host.docker.internal:172.17.0.1"
+    volumes:
+      - /root/apisix-dashboard/conf/config.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
